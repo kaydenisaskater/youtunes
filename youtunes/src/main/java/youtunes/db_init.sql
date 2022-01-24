@@ -4,7 +4,7 @@ DROP USER IF EXISTS 'youtunes_user'@'localhost';
 CREATE USER 'youtunes_user'@'localhost' IDENTIFIED BY 'youtunespass'; 
 
 --give the youtunes_user privileges
-GRANT ALL PRIVILEGES ON youtunes.* TO'youtunes_user'@'localhost';
+GRANT ALL PRIVILEGES ON * . * TO'youtunes_user'@'localhost';
 
 --remove foreign key to be allowed to remove tables
 ALTER TABLE album DROP FOREIGN KEY fk_artist;
