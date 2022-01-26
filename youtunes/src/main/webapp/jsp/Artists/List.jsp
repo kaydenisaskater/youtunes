@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>YouTunes Artist Listing</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/styles.css">
 </head>
 
 <body style="padding: 10;">
@@ -34,7 +34,8 @@
                 <h4 class="card-title"><%=artist.getFirstName()%> <%=artist.getLastName()%></h4>
                 <h6 class="text-muted card-subtitle mb-2"><%=artist.getArtistId()%></h6>
                 <p class="card-text">Description/Albums</p>
-				<a class="card-link" href="youtunes?action=artistDetails&artistId=<%=artist.getArtistId()%>">Edit</a><a class="card-link" href="youtunes?action=deleteArtist&artistId=<%=artist.getArtistId() %>">Delete</a>
+				<a class="card-link" href="youtunes?action=artistDetails&artistId=<%=artist.getArtistId()%>">Edit</a>
+				<a class="card-link" href="youtunes?action=deleteArtist&artistId=<%=artist.getArtistId() %>">Delete</a>
             </div>
         </div>
         <%

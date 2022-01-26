@@ -1,4 +1,4 @@
--- remove the user from MySQL and readd the user
+	-- remove the user from MySQL and readd the user
 DROP USER IF EXISTS 'youtunes_user'@'localhost';
 
 CREATE USER 'youtunes_user'@'localhost' IDENTIFIED BY 'youtunespass'; 

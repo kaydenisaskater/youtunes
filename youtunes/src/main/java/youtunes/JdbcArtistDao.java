@@ -6,6 +6,8 @@ import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.util.List;
 import java.util.ArrayList;
+import youtunes.Artist;
+import youtunes.ArtistDao;
 
 public class JdbcArtistDao implements ArtistDao {
 	JdbcManager db;
@@ -121,24 +123,24 @@ public class JdbcArtistDao implements ArtistDao {
 	}
 
 	@Override
-	public void update(Artist entity) {
+	public void update(Artist artist) {
 		// Write SQL to update an artist's record.
 		Connection con = db.getConn();
 		
 		if (con != null) {
 			try {
 				Statement updateArtist = con.createStatement();
-				String sqlStmt = "UPDATE artist SET first_name = '" + entity.getFirstName() + "', last_name = '" + entity.getLastName() + "' WHERE artist_id " + entity.getArtistId();
-				
+				String sqlStmt = "UPDATE artist SET first_name = '" + artist.getFirstName() + "', last_name = '" + artist.getLastName() + "' WHERE artist_id =" + artist.getArtistId();
+				System.out.println(sqlStmt);
 				try {
-					updateArtist.execute(sqlStmt);
+					updateArtist.executeUpdate(sqlStmt);
 				}
 				finally {
 					updateArtist.close();
 				}
 			}
 			catch (SQLException e) {
-				System.out.print(e);
+				System.out.println(e);
 			}
 		}
 		
@@ -155,7 +157,7 @@ public class JdbcArtistDao implements ArtistDao {
 				String sqlStmt = "DELETE FROM artist WHERE artist_id = " + key;
 				
 				try {
-					removeArtist.execute(sqlStmt);
+					removeArtist.executeUpdate(sqlStmt);
 				}
 				finally {
 					removeArtist.close();

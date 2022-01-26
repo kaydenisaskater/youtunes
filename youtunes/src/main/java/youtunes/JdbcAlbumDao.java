@@ -24,7 +24,7 @@ public class JdbcAlbumDao implements AlbumDao {
 		if (con != null) {
 			try {
 				Statement addAlbumStmt = con.createStatement();
-				String sqlStmt = String.format("INSERT INTO album(title, price, genre, img_url, artist_id) values(%s, %s, %s, %s, %s);", 
+				String sqlStmt = String.format("INSERT INTO album(title, price, genre, img_url, artist_id) values('%s', %s, '%s', '%s', %s);", 
 						newAlbum.getTitle(), newAlbum.getPrice(), newAlbum.getGenre(), newAlbum.getImgUrl(), newAlbum.getArtistId());
 
 				try {
@@ -36,6 +36,7 @@ public class JdbcAlbumDao implements AlbumDao {
 			}
 			catch (SQLException e) {
 				System.out.println(e);
+				System.out.println("Error is here");		
 			}
 		}
 	}

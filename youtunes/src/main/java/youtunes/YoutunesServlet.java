@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class YoutunesServlet
  */
-@WebServlet(name = "YoutunesServlet", urlPatterns = {"/", "/youtunes/*"})
+@WebServlet(name = "YoutunesServlet", urlPatterns = {"/youtunes/*"})
 public class YoutunesServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -74,7 +74,7 @@ public class YoutunesServlet extends HttpServlet {
 				url = base + "Artists/List.jsp";
 				break;
 			case "newAlbum":
-				url = base + "Album/Details.jsp";
+				url = base + "Album/New.jsp";
 				break;
 			case "albumDetails":
 				url = base + "Album/Details.jsp";

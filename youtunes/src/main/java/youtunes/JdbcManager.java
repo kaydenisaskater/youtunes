@@ -35,7 +35,6 @@ public class JdbcManager {
 			conn = DriverManager.getConnection(jdbcUrl, jdbcUserName, jdbcPassword);
 		}
 		catch (SQLException e){
-			System.out.println("Inside catch block of JdbcManager class");
 			System.out.println("Could not connect to DB: " + e.getMessage());
 		}
 		
