@@ -22,26 +22,28 @@
 <body style="padding: 10;">
 <jsp:include page="../Navbar.jsp" flush="true"/>
     <div>
-    <h1 class="text-center">Artist Listing</h1>
+    	<h1 class="text-center">Artist Listing</h1>
+    	<div class="text-center">
+        	<a class="btn btn-primary" href="youtunes?action=newArtist">New Artist</a>
+        </div>
+        <div class="d-flex d-sm-flex flex-wrap mx-auto" style="width: 90%">
     <%
     	List<Artist> artists = artistDao.list();
     	Iterator<Artist> i = artists.iterator();
     	while(i.hasNext()){
     		Artist artist = (Artist)i.next();
     %>
-        <div class="card" style="margin: 4%;">
+        <div class="card" style="margin: 2%;">
             <div class="card-body">
                 <h4 class="card-title"><%=artist.getFirstName()%> <%=artist.getLastName()%></h4>
-                <h6 class="text-muted card-subtitle mb-2"><%=artist.getArtistId()%></h6>
-                <p class="card-text">Description/Albums</p>
-				<a class="card-link" href="youtunes?action=artistDetails&artistId=<%=artist.getArtistId()%>">Edit</a>
-				<a class="card-link" href="youtunes?action=deleteArtist&artistId=<%=artist.getArtistId() %>">Delete</a>
+				<a class="card-link btn btn-primary" href="youtunes?action=artistDetails&artistId=<%=artist.getArtistId()%>">Edit</a>
+				<a class="card-link btn btn-danger" href="youtunes?action=deleteArtist&artistId=<%=artist.getArtistId() %>">Delete</a>
             </div>
         </div>
         <%
     	}
         %>
-        <a href="youtunes?action=newArtist"><button>New Artist</button></a>
+        </div>
     </div>
 <jsp:include page="../ScriptFooter.jsp" flush="true"/>
 <jsp:include page="../Footer.jsp" flush="true"/>

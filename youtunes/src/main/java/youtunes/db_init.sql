@@ -42,14 +42,14 @@ INSERT INTO artist(first_name, last_name) VALUES('Dolly', 'Parton');
 INSERT INTO artist(first_name, last_name) VALUES('Chris', 'Cagle');
 
 --insert statements for album table
-INSERT INTO album(title, price, genre, img_url, artist_id) VALUES('Room for Squares', 24.99, 'Rock', '', (SELECT artist_id FROM artist WHERE last_name = 'Mayer'));
-INSERT INTO album(title, price, genre, img_url, artist_id) VALUES('Sob Rock', 24.99, 'Pop', '', (SELECT artist_id FROM artist WHERE last_name = 'Mayer'));
-INSERT INTO album(title, price, genre, img_url, artist_id) VALUES('Magazines or Novels', 30.99, 'Pop', '', (SELECT artist_id FROM artist WHERE last_name = 'Grammer'));
-INSERT INTO album(title, price, genre, img_url, artist_id) VALUES('thank u, next', 35.99, 'Pop', '', (SELECT artist_id FROM artist WHERE last_name = 'Grande'));
-INSERT INTO album(title, price, genre, img_url, artist_id) VALUES('Music To Be Murdered By', 32.99, 'Rap', '', (SELECT artist_id FROM artist WHERE last_name = 'Mathers'));
-INSERT INTO album(title, price, genre, img_url, artist_id) VALUES('Kamikaze', 34.99, 'Rap', '', (SELECT artist_id FROM artist WHERE last_name = 'Mathers'));
-INSERT INTO album(title, price, genre, img_url, artist_id) VALUES('A Holly Dolly Christmas', 29.99, 'Holiday', '', (SELECT artist_id FROM artist WHERE last_name = 'Parton'));
-INSERT INTO album(title, price, genre, img_url, artist_id) VALUES('Anywhere But Here', 20.99, 'Country', '', (SELECT artist_id FROM artist WHERE last_name = 'Cagle'));
+INSERT INTO album(title, price, genre, img_url, artist_id) VALUES('Room for Squares', 24.99, 'Rock', 'RoomForSquares.jpeg', (SELECT artist_id FROM artist WHERE last_name = 'Mayer'));
+INSERT INTO album(title, price, genre, img_url, artist_id) VALUES('Sob Rock', 24.99, 'Pop', 'SobRock.jpg', (SELECT artist_id FROM artist WHERE last_name = 'Mayer'));
+INSERT INTO album(title, price, genre, img_url, artist_id) VALUES('Magazines or Novels', 30.99, 'Pop', 'MagazinesOrNovels.jpg', (SELECT artist_id FROM artist WHERE last_name = 'Grammer'));
+INSERT INTO album(title, price, genre, img_url, artist_id) VALUES('thank u, next', 35.99, 'Pop', 'thankunext.png', (SELECT artist_id FROM artist WHERE last_name = 'Grande'));
+INSERT INTO album(title, price, genre, img_url, artist_id) VALUES('Music To Be Murdered By', 32.99, 'Rap', 'MusicToBeMurderedBy.jpeg', (SELECT artist_id FROM artist WHERE last_name = 'Mathers'));
+INSERT INTO album(title, price, genre, img_url, artist_id) VALUES('Kamikaze', 34.99, 'Rap', 'Kamikaze.jpeg', (SELECT artist_id FROM artist WHERE last_name = 'Mathers'));
+INSERT INTO album(title, price, genre, img_url, artist_id) VALUES('A Holly Dolly Christmas', 29.99, 'Holiday', 'AHollyDollyChristmas.jpg', (SELECT artist_id FROM artist WHERE last_name = 'Parton'));
+INSERT INTO album(title, price, genre, img_url, artist_id) VALUES('Anywhere But Here', 20.99, 'Country', 'AnywhereButHere.jpeg', (SELECT artist_id FROM artist WHERE last_name = 'Cagle'));
 	
 	
 	

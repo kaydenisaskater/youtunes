@@ -12,7 +12,7 @@
 <jsp:include page="Navbar.jsp" flush="true"/>
 <div class="text-center mx-auto" style="width: 50%">
         <h1 class="text-center">About Us</h1>
-        <img class="flex-shrink-1" src="<%= request.getContextPath() + "/images/"%>aboutus.jpeg" />
+        <img class="img-fluid flex-shrink-1" src="<%= request.getContextPath() + "/images/"%>aboutus.jpeg" />
         <p class="text-center" style="margin: 20px;padding: 3px;">
         YouTunes is here to provide the latest music to listeners at a low cost. 
         You can purchase and stream music from various artists. Learn about new and upcoming artist

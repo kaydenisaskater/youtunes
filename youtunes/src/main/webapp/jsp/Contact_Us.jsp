@@ -11,8 +11,35 @@
 <body>
 <jsp:include page="Navbar.jsp" flush="true"/>
 <div style="width: 75%;margin-left: 12.5%;">
-        <h1 class="text-center">Contact Us</h1>
-        <form class="d-inline" style="width: 75%;text-align: left;"><label class="form-label d-block">Email:&nbsp;</label><input class="form-control form-control-sm d-block" type="email" style="width: 60%;padding-bottom: 10px;" name="email" placeholder="youremail@provider.com"><label class="form-label d-block d-md-flex align-items-md-start">Comments:</label><textarea class="form-control d-block" name="comments"></textarea></form>
+<div class="text-center mx-auto" style="width: 80%;">
+    <h1>Contact YouTunes</h1>
+    <p>YouTunes is here to satisfy your music needs. If you have an questions or concerns, please contact YouTunes support with one of the following forms of communication.</p>
+    <div class="d-inline">
+        <h5>Phone</h5>
+        <ul class="list-inline">
+            <li class="list-inline-item text-start">(123)456-7890</li>
+        </ul>
+    </div>
+    <div class="d-inline">
+        <h5>Email</h5>
+        <ul class="list-inline">
+            <li class="list-inline-item text-start">youtunes@support.com</li>
+        </ul>
+    </div>
+    <div class="d-inline">
+        <h5>Mail</h5>
+        <ul class="list-inline">
+            <li class="list-inline-item text-start">12345 Programmer St<br /> Kearney, NE 68845</li>
+        </ul>
+    </div>
+</div>
+        <h1 class="text-center">Contact Form</h1>
+        <form class="d-inline" style="width: 75%;text-align: left;">
+	        <label class="form-label d-block">Email:&nbsp;</label>
+	        <input class="form-control form-control-sm d-block" type="email" style="padding-bottom: 10px;" name="email" placeholder="youremail@provider.com">
+	        <label class="form-label d-block d-md-flex align-items-md-start">Comments:</label>
+	        <textarea class="form-control d-block" name="comments"></textarea>
+        </form>
 </div>
 <jsp:include page="Footer.jsp" flush="true"/>
 <jsp:include page="ScriptFooter.jsp" flush="true"/>

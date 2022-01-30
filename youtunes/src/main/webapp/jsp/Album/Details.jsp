@@ -41,7 +41,7 @@ try{
 	    <input type="hidden" name="action" value="updateAlbum"/>
 	    <input type="hidden" name="albumId" value="<%=album.getAlbumId()%>" />
 	    <label for="title" class="form-label d-inline">Title<input id="title" name="title" class="form-control" type="text" value="<%=album.getTitle()%>"></label>
-	    <label for="price" class="form-label d-inline">Price<input id="price" name="price" class="form-control" type="text" value="<%=album.getPrice()%>"></label>
+	    <label for="price" class="form-label d-inline">Price<input id="price" name="price" class="form-control" type="text" value="<%=String.format("%.2f", album.getPrice())%>"></label>
 	    <label for="imgUrl" class="form-label d-inline">Image URL<input id="imgUrl" name="imgUrl" class="form-control" type="text" value="<%=album.getImgUrl()%>"></label>
 	    <label for="genre" class="form-label d-inline">Genre<select id="genre" name="genre" class="form-select">
 		        <option value="Rock" <% if (album.getGenre().equals("Rock")) { %> selected <% } %>>Rock</option>
@@ -73,7 +73,7 @@ try{
 		<div class="alert alert-danger" id="alert-artist-message" role="alert">
   			
 		</div>
-		<button id="btnSubmit" class="btn btn-primary d-block mx-auto" type="submit" style="margin: 5px;">Add Album</button>
+		<button id="btnSubmit" class="btn btn-primary d-block mx-auto" type="submit" style="margin: 5px;">Update Album</button>
 	</form>
 <%		}
 	}

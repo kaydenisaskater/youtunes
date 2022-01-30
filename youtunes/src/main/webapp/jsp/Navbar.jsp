@@ -1,6 +1,6 @@
 <%@page language="java" contentType="text/html"%>
 
-<header><img><a class="float-end" href="#">Link<img class="border rounded-circle float-end"></a>
+<header>
         <nav class="navbar navbar-light navbar-expand-md">
             <div class="container">
             	<a class="navbar-brand" href="youtunes?action=homepage">YouTunes</a>
